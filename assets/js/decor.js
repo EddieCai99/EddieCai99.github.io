@@ -1,11 +1,12 @@
+
 function populate() {           
     var body = document.body;
     var html = document.documentElement;
-    var canvasHeight = window.outerHeight;
-    var canvasWidth = Math.max(body.scrollWidth, body.offsetWidth, 
-                html.clientWidth, html.scrollWidth, html.offsetWidth); 
+    var canvasWidth = window.innerWidth;
+    // var height = Math.max(body.scrollHeight, body.offsetHeight, 
+ //               html.clientHeight, html.scrollHeight, html.offsetHeight); 
 
-    //var canvasHeight = body.innerHeight;
+    var canvasHeight = body.scrollHeight;
 
     console.log(canvasHeight);
     var scene = new THREE.Scene();
