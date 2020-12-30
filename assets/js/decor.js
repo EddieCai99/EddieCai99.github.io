@@ -2,11 +2,11 @@
 function populate() {           
     var body = document.body;
     var html = document.documentElement;
-    var canvasWidth = window.innerWidth;
+    var canvasWidth = 400;
     // var height = Math.max(body.scrollHeight, body.offsetHeight, 
  //               html.clientHeight, html.scrollHeight, html.offsetHeight); 
 
-    var canvasHeight = body.scrollHeight;
+    var canvasHeight = 400;
 
     console.log(canvasHeight);
     var scene = new THREE.Scene();
