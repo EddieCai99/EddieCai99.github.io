@@ -1,6 +1,7 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300i,400i");
 
+
 /*
 	Ethereal by HTML5 UP
 	html5up.net | @ajlkn
@@ -198,8 +199,8 @@
 			height: 100%;
 			z-index: -1;
 			background-attachment: fixed;
-			background-color: #e1e6e1;
-			background-image: url("../../images/overlay.png"), url("../../images/bg.jpg");
+			background-color: #444444;
+			/*background-image: url("../../images/overlay.png"), url("../../images/bg.jpg");*/
 			background-repeat: repeat, repeat-x;
 			background-size: 128px 128px, cover;
 		}
@@ -3722,3 +3723,240 @@
    }
 }
 
+#BodyWrapper{
+	position:absolute;
+	top:0; left:0;
+	width:100%;
+	height:100%;
+	z-index:1;
+	display:none;
+}
+
+/* Animation */
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+
+.image1 {
+  display: block;
+  width: auto;
+  height: auto;
+}
+.image1 .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: auto;
+  max-width: auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #e37b7c;
+}
+.image1:hover .overlay{
+	opacity: 1;
+}
+
+.image1[data-position] img {
+			-moz-object-fit: cover;
+			-webkit-object-fit: cover;
+			-ms-object-fit: cover;
+			object-fit: cover;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.image1[data-position="top left"] img {
+			-moz-object-position: top left;
+			-webkit-object-position: top left;
+			-ms-object-position: top left;
+			object-position: top left;
+		}
+
+		.image1[data-position="top"] img {
+			-moz-object-position: top;
+			-webkit-object-position: top;
+			-ms-object-position: top;
+			object-position: top;
+		}
+
+		.image1[data-position="top right"] img {
+			-moz-object-position: top right;
+			-webkit-object-position: top right;
+			-ms-object-position: top right;
+			object-position: top right;
+		}
+
+		.image1[data-position="right"] img {
+			-moz-object-position: right;
+			-webkit-object-position: right;
+			-ms-object-position: right;
+			object-position: right;
+		}
+
+		.image1[data-position="bottom right"] img {
+			-moz-object-position: bottom right;
+			-webkit-object-position: bottom right;
+			-ms-object-position: bottom right;
+			object-position: bottom right;
+		}
+
+		.image1[data-position="bottom"] img {
+			-moz-object-position: bottom;
+			-webkit-object-position: bottom;
+			-ms-object-position: bottom;
+			object-position: bottom;
+		}
+
+		.image1[data-position="bottom left"] img {
+			-moz-object-position: bottom left;
+			-webkit-object-position: bottom left;
+			-ms-object-position: bottom left;
+			object-position: bottom left;
+		}
+
+		.image1[data-position="left"] img {
+			-moz-object-position: left;
+			-webkit-object-position: left;
+			-ms-object-position: left;
+			object-position: left;
+		}
+
+		.image1[data-position="center"] img {
+			-moz-object-position: center;
+			-webkit-object-position: center;
+			-ms-object-position: center;
+			object-position: center;
+		}
+
+		.image1[data-position="25% 25%"] img {
+			-moz-object-position: 25% 25%;
+			-webkit-object-position: 25% 25%;
+			-ms-object-position: 25% 25%;
+			object-position: 25% 25%;
+		}
+
+		.image1[data-position="75% 25%"] img {
+			-moz-object-position: 75% 25%;
+			-webkit-object-position: 75% 25%;
+			-ms-object-position: 75% 25%;
+			object-position: 75% 25%;
+		}
+
+		.image1[data-position="75% 75%"] img {
+			-moz-object-position: 75% 75%;
+			-webkit-object-position: 75% 75%;
+			-ms-object-position: 75% 75%;
+			object-position: 75% 75%;
+		}
+
+		.image1[data-position="25% 75%"] img {
+			-moz-object-position: 25% 75%;
+			-webkit-object-position: 25% 75%;
+			-ms-object-position: 25% 75%;
+			object-position: 25% 75%;
+		}
+
+		.image1 img {
+			display: block;
+		}
+
+		.image1.left, .image.right {
+			max-width: 40%;
+		}
+
+			.image1.left img, .image1.right img {
+				width: 100%;
+			}
+
+		.image1.left {
+			float: left;
+			padding: 0 1.5rem 1rem 0;
+			top: 0.25rem;
+		}
+
+		.image1.right {
+			float: right;
+			padding: 0 0 1rem 1.5rem;
+			top: 0.25rem;
+		}
+
+		.image1.fit {
+			display: block;
+			margin: 0 0 1.5rem 0;
+			width: 100%;
+		}
+
+			.image1.fit img {
+				width: 100%;
+			}
+
+		.image1.main {
+			display: block;
+			margin: 0 0 2.25rem 0;
+			width: 100%;
+		}
+
+			.image1.main img {
+				width: 100%;
+			}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: auto;
+  max-width: auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #e37b7c;
+}
+
+.container:hover .overlay {
+  max-height: auto;
+  max-width: auto;
+  position: relative;
+  opacity: 1;
+}
+
+/*.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}*/

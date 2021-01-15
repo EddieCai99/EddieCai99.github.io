@@ -1,6 +1,6 @@
 
 function populate() {           
-    var body = document.body;
+   var body = document.body;
     var html = document.documentElement;
     var canvasWidth = 400;
     // var height = Math.max(body.scrollHeight, body.offsetHeight, 
